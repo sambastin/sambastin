@@ -1,0 +1,25 @@
+k=0
+
+while [ $k = 0 ]
+do
+
+echo "Welke webserver wil je gebruiken Nginx of Apache2?"
+read webserver
+
+if [ $webserver = "Nginx" ]
+then
+sudo zypper install nginx
+
+elif [ $webserver = "Apache2" ]
+then
+sudo zypper install apache2
+
+fi
+
+echo "Nextcloud word geïnstalleerd"
+sudo zypper install nextcloud
+
+echo "fail2ban word geïnstalleerd"
+sudo zypper install fail2ban
+
+done
